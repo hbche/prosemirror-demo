@@ -21,9 +21,10 @@ function startImageUpload(view: EditorView, file: File) {
 
       if (!pos) return;
 
+      const imageNode = schema.nodes.image.create({ src: url });
       view.dispatch(
         view.state.tr
-          .replaceWith(pos, pos, schema.nodes.image.create({ src: url }))
+          .replaceWith(pos, pos, imageNode)
           .setMeta(placeholderPlugin, { remove: { id } })
       );
     },
@@ -32,3 +33,4 @@ function startImageUpload(view: EditorView, file: File) {
     }
   );
 }
+export default startImageUpload;
