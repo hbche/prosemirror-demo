@@ -57,6 +57,7 @@ class ProseMirrorView {
   }
 }
 
+/** markdown 示例 */
 function MarkdownExample() {
   const [viewType, setViewType] = useState<'markdown' | 'wysiwym'>('markdown');
   const [view, setView] = useState<MarkdownView | ProseMirrorView>();

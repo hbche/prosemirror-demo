@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import startImageUpload from './start-image-upload';
 import placeholderPlugin from './placeholder-plugin';
 
+/** 图片上传示例 */
 function ImageUploadExample() {
   const [view, setView] = useState<EditorView>();
 
@@ -20,9 +21,6 @@ function ImageUploadExample() {
       }),
     });
     setView(view);
-
-    console.log('Available nodes:', schema.spec.nodes.get('image'));
-    console.log('Has image node:', !!schema.nodes.image);
 
     return () => view.destroy();
   }, []);

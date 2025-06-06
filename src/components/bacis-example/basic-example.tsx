@@ -49,7 +49,6 @@ function BasicExample() {
       }),
     });
 
-    console.log(view);
 
     // 卸载时销毁 prosemirror-view 实例，避免重复生成
     return () => {

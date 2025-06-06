@@ -11,6 +11,7 @@ import stegosaurus from './img/dino/stegosaurus.png';
 import triceratops from './img/dino/triceratops.png';
 import tyrannosaurus from './img/dino/tyrannosaurus.png';
 
+/** 恐龙示例 */
 function DinosExample() {
   useEffect(() => {
     // 支持的恐龙类型
@@ -46,10 +47,11 @@ function DinosExample() {
 
       // 节点到DOM转换规则：所有节点渲染为 带dino-tpye 属性的img元素
       toDOM: (node) => [
+        // 实际渲染的元素
         'img',
         {
+          // 自定义属性
           'dino-type': node.attrs.type,
-          //   src: `/img/dino/${node.attrs.type}.png`,
           src: dinoUrlMap[node.attrs.type],
           title: node.attrs.type,
           calss: 'dinoosaur',
